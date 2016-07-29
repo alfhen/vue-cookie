@@ -35,7 +35,7 @@ The plugin is available through ```this.$cookie``` in components
 ``` javascript
 // From some method in one of your Vue components
 this.$cookie.set('test', 'Hello world!', 1);
-// This will set a cookie with the name 'cookieName' and the value 'Hello world!' that expires in one day
+// This will set a cookie with the name 'test' and the value 'Hello world!' that expires in one day
 
 // To get the value of a cookie use
 this.$cookie.get('test');
