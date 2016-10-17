@@ -4,6 +4,7 @@
 
         install: function (Vue) {
             Vue.prototype.$cookie = this;
+            Vue.cookie = this;
         },
 
         set: function (name, value, days) {
