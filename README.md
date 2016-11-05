@@ -45,6 +45,18 @@ this.$cookie.delete('test');
 
 ```
 
-Thanks for using the plugin, I am happy to accept feedback/pull requests, don not forget to star if you like it!
+Thanks for using the plugin, I am happy to accept feedback/pull requests, do not forget to star if you like it!
 
 Happy Coding! :D
+
+### Tests
+This packacge uses the ´´´testem``` framework and jasmine assertion library
+
+``` bash
+# Run npm install to fetch dependencies
+npm install
+
+# Then you may run the tests from
+npm run test
+
+```

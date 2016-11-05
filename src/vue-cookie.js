@@ -8,7 +8,7 @@
         },
 
         set: function (name, value, days) {
-            var d = new Date;
+            let d = new Date;
             d.setTime(d.getTime() + 24*60*60*1000*days);
             window.document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
         },
@@ -21,7 +21,6 @@
         delete: function (name) {
             this.set(name, '', -1);
         }
-
     };
 
     if (typeof exports == "object") {
