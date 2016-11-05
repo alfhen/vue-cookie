@@ -1,5 +1,7 @@
 language: node_js
 node_js:
   - "6.1"
+before_script:
+  - npm install -g gulp
 script:
   - ./node_modules/testem/testem.js ci --launch PhantomJS
