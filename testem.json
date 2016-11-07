@@ -7,7 +7,7 @@
   "serve_files": [
     "test/bundle.js"
   ],
-  "before_tests" : "gulp",
+  "before_tests" : "gulp --gulpfile test.gulpfile.js",
   "after_tests" : "rm test/bundle.js",
   "launch_in_dev" : ["Chrome"]
 }

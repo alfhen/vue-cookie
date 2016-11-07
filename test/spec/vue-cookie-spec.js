@@ -11,14 +11,6 @@ describe('VueCookie', function(){
         this.cookieDomain = 'localhost';
     });
 
-    it('Should set cookie domain config and validate that it is set', function(){
-
-        Vue.cookie.setCookieDomain(this.cookieDomain);
-
-        expect(Vue.cookie.getCookieDomain())
-          .toBe(this.cookieDomain);
-    });
-
     it('Should set and retrieve a Cookie with given value', function(){
 
         Vue.cookie.set(this.cookieKey, this.cookieValue, 1);
@@ -38,10 +30,18 @@ describe('VueCookie', function(){
 
     it('Should set and retrieve a Cookie with given value from a domain', function(){
 
-        Vue.cookie.set(this.cookieKey, this.cookieValue, 1, 'test' + this.cookieDomain);
+        Vue.cookie.set(this.cookieKey, this.cookieValue, {expires: 1, domain: this.cookieDomain});
 
         expect(Vue.cookie.get(this.cookieKey))
             .toBe(this.cookieValue);
+    });
+
+    it('Should delete existing cookie with a domain and get null when fetching deleted cookie', function(){
+
+        Vue.cookie.delete(this.cookieKey, {domain: this.cookieDomain});
+
+        expect(Vue.cookie.get(this.cookieKey))
+            .toBe(null);
     });
 
 

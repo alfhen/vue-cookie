@@ -1,41 +1,32 @@
 (function () {
 
-    var VueCookie = {
+    var Cookie = require('tiny-cookie');
 
-        config: {
-            domain: null
-        },
+    var VueCookie = {
 
         install: function (Vue) {
             Vue.prototype.$cookie = this;
             Vue.cookie = this;
         },
-
-        set: function (name, value, days, domain) {
-            let d = new Date;
-            let cookieDomain = typeof domain !== 'undefined' ? domain : this.getCookieDomain();
-            let domainString = cookieDomain !== null ? ";domain=" + cookieDomain : '';
-            d.setTime(d.getTime() + 24*60*60*1000*days);
-            window.document.cookie = name + "=" + value + domainString + ";path=/;expires=" + d.toGMTString();
+        set: function (name, value, daysOrOptions) {
+            let opts = daysOrOptions;
+            if(Number.isInteger(daysOrOptions)) {
+                opts = {expires: daysOrOptions};
+            }
+            return Cookie.set(name, value, opts);
         },
 
         get: function (name) {
-            var v = window.document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-            return v ? v[2] : null;
+            return Cookie.get(name);
         },
 
-        delete: function (name) {
-            this.set(name, '', -1);
-        },
-
-        setCookieDomain: function (domain) {
-            this.config.cookieDomain = domain;
-        },
-
-        getCookieDomain: function () {
-            return this.config.cookieDomain;
+        delete: function (name, options) {
+            let opts = {expires: -1};
+            if(options !== undefined) {
+                opts = Object.assign(options, opts);
+            }
+            this.set(name, '', opts);
         }
-
     };
 
     if (typeof exports == "object") {

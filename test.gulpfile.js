@@ -6,6 +6,6 @@ require('laravel-elixir-vue');
 
 elixir(function(mix) {
 
-    mix.webpack('vue-cookie.js', 'build', 'src');
+    mix.webpack('vue-cookie-spec.js', 'test/bundle.js', 'test/spec');
 
 });
