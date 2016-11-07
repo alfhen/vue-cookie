@@ -8,7 +8,9 @@
   "license": "MIT",
   "scripts": {
     "test": "./node_modules/testem/testem.js ci",
-    "build": "gulp --production"
+    "test-dev": "./node_modules/testem/testem.js -f dev.testem.json",
+    "build": "gulp --production",
+    "build-test": "gulp --gulpfile test.gulpfile.js"
   },
   "repository": {
     "type": "git",

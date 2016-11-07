@@ -2,4 +2,4 @@ language: node_js
 node_js:
   - "6.1"
 script:
-  - ./node_modules/testem/testem.js ci --launch PhantomJS
+  - ./node_modules/testem/testem.js ci

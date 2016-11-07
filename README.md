@@ -85,6 +85,6 @@ This packacge uses the ´´´testem``` framework and ```jasmine``` assertion lib
 npm install
 
 # Then you may run the tests from
-npm run test
+npm run test-dev
 
 ```

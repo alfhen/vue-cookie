@@ -1,0 +1,12 @@
+{
+  "framework": "jasmine",
+  "src_files": [
+    "src/vue-cookie.js",
+    "test/spec/vue-cookie-spec.js"
+  ],
+  "serve_files": [
+    "test/bundle.js"
+  ],
+  "before_tests" : "gulp --gulpfile test.gulpfile.js",
+  "launch_in_dev" : ["Chrome"]
+}
