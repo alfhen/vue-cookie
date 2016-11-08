@@ -1,10 +1,10 @@
 {
   "name": "vue-cookie",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A Vue.js plugin for manipulating cookies",
   "author": "Alf Henderson <alfhenderson@gmail.com>",
   "private": false,
-  "main": "build/vue-cookie.js",
+  "main": "src/vue-cookie.js",
   "license": "MIT",
   "scripts": {
     "test": "./node_modules/testem/testem.js ci",
@@ -17,13 +17,14 @@
     "url": "https://github.com/alfhen/vue-cookie.git"
   },
   "dependencies": {
+    "tiny-cookie": "^1.0"
+  },
+  "devDependencies": {
     "jasmine": "^2.5.2",
     "laravel-elixir": "^6.0.0-13",
     "laravel-elixir-vue": "^0.1.8",
     "laravel-elixir-webpack-official": "^1.0.9",
     "testem": "~1.8",
-    "tiny-cookie": "^1.0",
     "vue": "^2.0.5"
-  },
-  "devDependencies": {}
+  }
 }
