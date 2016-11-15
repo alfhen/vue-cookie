@@ -9,7 +9,7 @@
             Vue.cookie = this;
         },
         set: function (name, value, daysOrOptions) {
-            let opts = daysOrOptions;
+            var opts = daysOrOptions;
             if(Number.isInteger(daysOrOptions)) {
                 opts = {expires: daysOrOptions};
             }
@@ -21,7 +21,7 @@
         },
 
         delete: function (name, options) {
-            let opts = {expires: -1};
+            var opts = {expires: -1};
             if(options !== undefined) {
                 opts = Object.assign(options, opts);
             }
