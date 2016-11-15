@@ -61,15 +61,15 @@ this.$cookie.delete('test', {domain: 'localhost'});
 var date = new Date;
 date.setDate(date.getDate() + 21);
 
-Cookie.set('dateObject', 'A date object', { expires: date });
-Cookie.set('dateString', 'A parsable date string', { expires: date.toGMTString() });
-Cookie.set('integer', 'Seven days later', { expires: 7 });
-Cookie.set('stringSuffixY', 'One year later', { expires: '1Y' });
-Cookie.set('stringSuffixM', 'One month later', { expires: '1M' });
-Cookie.set('stringSuffixD', 'One day later', { expires: '1D' });
-Cookie.set('stringSuffixh', 'One hour later', { expires: '1h' });
-Cookie.set('stringSuffixm', 'Ten minutes later', { expires: '10m' });
-Cookie.set('stringSuffixs', 'Thirty seconds later', { expires: '30s' });
+this.$cookie.set('dateObject', 'A date object', { expires: date });
+this.$cookie.set('dateString', 'A parsable date string', { expires: date.toGMTString() });
+this.$cookie.set('integer', 'Seven days later', { expires: 7 });
+this.$cookie.set('stringSuffixY', 'One year later', { expires: '1Y' });
+this.$cookie.set('stringSuffixM', 'One month later', { expires: '1M' });
+this.$cookie.set('stringSuffixD', 'One day later', { expires: '1D' });
+this.$cookie.set('stringSuffixh', 'One hour later', { expires: '1h' });
+this.$cookie.set('stringSuffixm', 'Ten minutes later', { expires: '10m' });
+this.$cookie.set('stringSuffixs', 'Thirty seconds later', { expires: '30s' });
 
 ```
 
