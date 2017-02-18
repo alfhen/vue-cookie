@@ -1,0 +1,21 @@
+{
+  "name": "vue-cookie",
+  "description": "A Vue.js plugin for manipulating cookies",
+  "main": "src/vue-cookie.js",
+  "authors": [
+    "Alf Henderson <alfhenderson@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "VueJS",
+    "Cookie"
+  ],
+  "homepage": "https://github.com/alfhen/vue-cookie",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
